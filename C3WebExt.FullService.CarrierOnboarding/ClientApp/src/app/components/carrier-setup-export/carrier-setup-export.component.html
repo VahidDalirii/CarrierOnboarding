@@ -1,0 +1,72 @@
+<div class="export-title">
+  <h5>History overview and export</h5>
+</div>
+
+<div>
+  <button class="check-disabled-btn"disabled>
+    <i class="fas fa-check"></i>
+    The updates are ready for export.</button>
+</div>
+
+<div class="updates-export-section">
+
+  <div class="updates-section">
+    <h5>Updates to be exported</h5>
+    <table class="table table-framed">
+      <thead>
+        <tr>
+          <th>
+            WHEN
+          </th>
+          <th>
+            LOCATION
+          </th>
+          <th>
+            UPDATED BY
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="export-to-test-section">
+    <h5>Export to test</h5>
+    <textarea rows="4" cols="40" name="comment" form="usrform" placeholder="Release note"></textarea><br>
+    <input type="checkbox" id="update-customer" name="update-customer">
+    <label for="update-customer">Also update customer foundation</label>
+  </div>
+
+</div>
+
+<div class="history-log-section">
+  <h5>History log for updates exported to test</h5>
+  <table class="table table-framed">
+    <thead>
+      <tr>
+        <th>
+          WHEN
+        </th>
+        <th>
+          CHANGE LOCATIONS
+        </th>
+        <th>
+          RELEASE NOTE
+        </th>
+        <th>
+          EXPORTED BY
+        </th>
+        <th>
+          CURRENT STATUS
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+
+<div class="end-buttons">
+  <button type="submit" routerLink="/basicCarrierComponent" class="btn btn-primary btn-primary">Finish</button>
+</div>

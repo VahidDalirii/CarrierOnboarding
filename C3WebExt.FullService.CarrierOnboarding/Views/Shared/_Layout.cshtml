@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" class="centiro-design-system">
+<head>
+  <base href='@Context.Request.PathBase'>
+  <meta charset="utf-8" />
+  <title>@ViewData["Title"] - C3WebExt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  @await Component.InvokeAsync("Favicon")
+  @RenderSection("head", false)
+  @RenderSection("styles", false)
+</head>
+<body>
+  @await Component.InvokeAsync("Navigation")
+  @RenderBody()
+  @RenderSection("scripts", false)
+</body>
+</html>

@@ -1,0 +1,36 @@
+@import '../../shared/styles/variables.scss';
+
+.file-info{
+  display: flex;
+}
+
+.file-text{
+  width: 40%;
+  margin: 20px 40px;
+  max-height: 400px;
+  overflow: scroll;
+}
+
+.file-lebel{
+  margin-top: 20px;
+  width: 30%;
+}
+
+.butons{
+  margin-left: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .file-info{
+    display: inline;
+  }
+
+  .file-text{
+    width: 80%;
+  }
+
+  .file-lebel{
+    margin-bottom: 20px;
+    width: 80%;
+  }
+}

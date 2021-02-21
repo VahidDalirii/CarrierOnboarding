@@ -1,0 +1,12 @@
+@import '../../shared/styles/variables.scss';
+
+.settings{
+  display: flex;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .settings{
+    display: inline;
+  }
+}

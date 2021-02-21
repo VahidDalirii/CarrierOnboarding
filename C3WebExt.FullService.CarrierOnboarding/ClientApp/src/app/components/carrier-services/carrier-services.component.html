@@ -1,0 +1,54 @@
+<div class="services-title">
+  <h5>Services offered by the carrier</h5>
+</div>
+
+<div class="services-section">
+  <button type="submit" class="btn btn-primary btn-sm" (click)="addNewService()">Add new</button>
+</div>
+
+<div *ngFor="let service of _carrier.services, let i = index">
+  <form class="services" style="border: 1px solid #ccc; margin-bottom: 10px;">
+
+    <p style="margin-top: 10px;">
+      <i class="fas fa-plus-circle" (click)="returnSelectedService(i)" style="margin: 10px;"></i>
+      <!-- <i [ngClass]="{'clickable':true, 'space-right': true, 'fa fa-plus-circle' : !row.showDetails, 'fas fa-minus-circle' : row.showDetails }"
+      (click)="returnSelectedService(i)" style="margin: 10px;"> </i> -->
+      {{service.name}}
+    </p>
+    <div>
+      <button type="button" class="btn" style="margin-right: 5px;">Renam</button>
+      <button type="button" class="btn" (click)="deleteService(service.id)">Delete</button>
+    </div>
+  </form>
+  <app-service [selectedService]="selectedService"></app-service>
+</div>
+
+<div class="service-attributes-title">
+  <h5>Service attributes</h5>
+</div>
+
+<div class="service-attributes-section">
+  <button type="submit" class="btn btn-primary btn-sm" (click)="addNewServiceAttribute()">Add new</button>
+</div>
+
+<div *ngFor="let serviceAttribute of _carrier.serviceAttributes">
+  <form class="services" style="border: 1px solid #ccc; margin-bottom: 10px;">
+    <p style="margin-top: 10px;">
+      <i class="fas fa-plus-circle" style="margin: 10px;"></i>
+      <!-- <i [ngClass]="{'clickable':true, 'space-right': true, 'fa fa-plus-circle' : !row.showDetails, 'fas fa-minus-circle' : row.showDetails }"
+      (click)="toggleServiceAttributeDetails(i)" style="margin: 10px;"> </i> -->
+      {{serviceAttribute.name}}
+    </p>
+    <div>
+      <button type="submit" class="btn" style="margin-right: 5px;">Renam</button>
+      <button type="submit" class="btn" (click)="deleteServiceAttribute(serviceAttribute.id)">Delete</button>
+    </div>
+  </form>
+  <app-service-attribute></app-service-attribute>
+</div>
+
+
+<div class="end-buttons">
+  <button type="submit" routerLink="/basicCarrierComponent" class="btn btn-secondary btn-sm">Back</button>
+  <button type="submit" routerLink="/availableDocuments" class="btn btn-primary btn-sm">Next</button>
+</div>

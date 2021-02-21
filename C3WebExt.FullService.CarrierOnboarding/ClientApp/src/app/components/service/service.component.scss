@@ -1,0 +1,38 @@
+@import '../../shared/styles/variables.scss';
+
+.services{
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+.service-textboxes > input{
+  width: 23%;
+}
+
+.service-labels > label{
+  width: 23%;
+}
+
+.service-labels{
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-textboxes{
+  display: flex;
+  justify-content: space-between;
+}
+
+.limited-countries-option{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.limited-countries-option > input{
+  width: 80%;
+}
+
+.attributes{
+  display: flex;
+}

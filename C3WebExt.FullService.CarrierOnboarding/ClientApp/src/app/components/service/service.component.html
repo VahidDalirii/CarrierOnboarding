@@ -1,0 +1,64 @@
+<form class="services" style="border: 1px solid #ccc; ">
+
+  <div class="service-labels">
+    <label for="c3web-name">Name in C3web</label>
+    <label for="code-in-specification">Code in specification</label>
+    <label for="name-on-labels">Name on labels</label>
+    <label for="routing-component">Routing component</label>
+  </div>
+  <div class="service-textboxes">
+
+    <input type="text" id="c3web-name">
+    <input type="text" id="code-in-specification">
+    <input type="text" id="name-on-labels">
+    <input type="text" id="routing-component">
+
+  </div>
+
+  <p style="font-weight: bold ; margin-top: 40px;">Country compatibility</p>
+  <div class="country-compatibility">
+    <div class="everywhere-option">
+      <input type="radio" id="everywhere" name="country-compatibility" value="">
+      <label for="everywhere">Everywhere</label>
+    </div>
+
+    <div class="limited-countries-option">
+      <input type="radio" id="limited-countries" name="country-compatibility" value="">
+      <label for="limited-countries">Limited countries</label>
+      <app-country-multi-select [serviceTypeCountries]= "serviceTypeCountries" class="country-multi-select"></app-country-multi-select>
+    </div>
+  </div>
+
+  <p style="font-weight: bold ; margin-top: 40px;">Service Attributes</p>
+
+  <div>
+    <button class="info-disabled-btn" disabled>
+      <i class="fas fa-info"></i>
+      Inactivate service attributes are not available due to conflicts with settings on that service attribute.</button>
+  </div>
+
+  <form class="support-form" style="border: 1px solid #ccc; padding: 10px;">
+    <div class="attributes">
+    <div>
+      <input type="checkbox" id="service-attribute1" name="service-attribute1" value="serviceAttribute1">
+      <label for="service-attribute1" > Service attribute 1 </label><br>
+      <input type="checkbox" id="service-attribute2" name="service-attribute2" value="serviceAttribute2" >
+      <label for="service-attribute2" > Service attribute 2 </label><br>
+      <input type="checkbox" id="service-attribute3" name="service-attribute3" value="serviceAttribute3">
+      <label for="service-attribute3" > Service attribute 3</label>
+    </div>
+    <div style="margin-left: 12%;">
+      <input type="checkbox" id="service-attribute4" name="service-attribute4" value="serviceAttribute4" disabled>
+      <label for="service-attribute4"> Service attribute 4 </label><br>
+      <input type="checkbox" id="service-attribute5" name="service-attribute5" value="serviceAttribute5" disabled>
+      <label for="service-attribute5"> Service attribute 5 </label><br>
+      <input type="checkbox" id="service-attribute6" name="service-attribute6" value="serviceAttribute6" disabled>
+      <label for="service-attribute6">Service attribute 6</label>
+    </div>
+    </div>
+  </form>
+
+
+  <p style=" margin-top: 40px;">Rating component</p>
+  <input type="text" id="rating-component" style="width: 300px; margin-bottom: 20px;">
+</form>

@@ -1,0 +1,18 @@
+@{
+  ViewData["Title"] = "Index";
+  Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Scripts {
+  <script asp-src-include="~/dist/runtime*.js"></script>
+  <script asp-src-include="~/dist/polyfills-es5*.js"></script>
+  <script asp-src-include="~/dist/scripts*.js"></script>
+  <script asp-src-include="~/dist/vendor*.js"></script>
+  <script asp-src-include="~/dist/main*.js"></script>
+}
+
+@section Styles {
+  <link rel="stylesheet" type="text/css" asp-href-include="~/dist/styles*.css">
+}
+
+<app-root></app-root>

@@ -1,0 +1,51 @@
+@import '../../shared/styles/variables.scss';
+
+.services{
+  padding-right: 3%;
+  padding-left: 3%;
+}
+
+.service-textboxes > input{
+  width: 30%;
+}
+
+.service-labels > label{
+  width: 30%;
+}
+
+.service-labels{
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+}
+
+.service-textboxes{
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+}
+
+.limited-countries-option{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.limited-countries-option > input{
+  width: 80%;
+}
+
+.limited-services-option{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.limited-services-option > form{
+  width: 80%;
+}
+
+.attributes{
+  display: flex;
+}
+

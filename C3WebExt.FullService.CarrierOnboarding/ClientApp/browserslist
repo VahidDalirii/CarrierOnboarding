@@ -1,0 +1,8 @@
+# we only want es2015 compliant browsers https://caniuse.com/#feat=es6
+# just use one as representative for all
+# TODO: Do we need support for es5?
+Chrome >= 61 
+
+last 2 versions
+not dead
+ie 11

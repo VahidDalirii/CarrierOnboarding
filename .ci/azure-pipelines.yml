@@ -1,0 +1,18 @@
+name: $(Date:yyyy.M.d)$(Rev:.r)
+
+resources:
+  repositories:
+    - repository: templates
+      type: git
+      name: kubernetes-application-pipeline
+
+trigger:
+- master
+
+variables:
+  buildConfiguration: 'Release'
+
+stages:
+- template: pipelines/pipeline.yml@templates
+  parameters:
+    appSettingsPackagingEnabled: true

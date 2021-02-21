@@ -1,0 +1,72 @@
+<form class="services" style="border: 1px solid #ccc; ">
+
+  <p style="font-weight: bold ; margin-top: 40px;">Services to use the document</p>
+  <div class="all-option">
+    <input type="radio" id="all" name="service-compatibility" value="">
+    <label for="all">All</label>
+  </div>
+
+  <div class="limited-services-option">
+    <input type="radio" id="limited-services" name="service-compatibility" value="" style="float: left;">
+    <label for="limited-services" >Limited services</label>
+
+    <form class="support-form" style="border: 1px solid #ccc; padding: 10px;">
+      <div class="attributes">
+      <div>
+        <input type="checkbox" id="service1" name="service1" value="service1">
+        <label for="service1" > Service 1 </label><br>
+        <input type="checkbox" id="service2" name="service2" value="service2" >
+        <label for="service2" > Service 2 </label><br>
+        <input type="checkbox" id="service3" name="service3" value="service3">
+        <label for="service3" > Service 3</label>
+      </div>
+      <div style="margin-left: 12%;">
+        <input type="checkbox" id="service4" name="service4" value="service4">
+        <label for="service4"> Service 4 </label><br>
+        <input type="checkbox" id="service5" name="service5" value="service5">
+        <label for="service5"> Service 5 </label><br>
+        <input type="checkbox" id="service6" name="service6" value="service6">
+        <label for="service6">Service 6</label>
+      </div>
+      </div>
+    </form>
+  </div>
+
+  <p style="font-weight: bold ; margin-top: 40px;">Countries to use the document</p>
+  <div class="country-compatibility">
+    <div class="everywhere-option">
+      <input type="radio" id="everywhere" name="country-compatibility" value="">
+      <label for="everywhere">Everywhere</label>
+    </div>
+
+    <div class="limited-countries-option">
+      <input type="radio" id="limited-countries" name="country-compatibility" value="">
+      <label for="limited-countries" >Limited countries</label>
+      <app-country-multi-select [serviceTypeCountries]= "serviceTypeCountries" class="country-multi-select"></app-country-multi-select>
+    </div>
+  </div>
+
+  <p style="font-weight: bold ; margin-top: 40px;">Process stage to use the document</p>
+
+  <select id="can-rotate" name="can-rotate" style="width: 200px; margin-bottom: 30px;">
+    <option value="endOfDay" selected>End of day</option>
+    <option value="startOfDay">Start of day</option>
+  </select>
+
+  <div class="process-option">
+    <input type="radio" id="always-apply" name="process-options" value="">
+    <label for="always-apply">Always apply this process stage</label><br>
+    <input type="radio" name="process-options" id="customer-specific" value="">
+    <label for="customer-specific">Allow for customer specific settings</label>
+  </div>
+
+  <p style="font-weight: bold ; margin-top: 40px;">Group by EOD</p>
+  <div class="group-option" style="margin-bottom: 20px;">
+    <input type="radio" id="yes" name="group-options" value="">
+    <label for="ayes">Yes</label><br>
+    <input type="radio" name="group-options" id="no" value="">
+    <label for="no">No</label>
+  </div>
+
+
+</form>

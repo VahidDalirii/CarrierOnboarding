@@ -1,0 +1,83 @@
+<form class="services" style="border: 1px solid #ccc; ">
+
+  <div class="service-labels">
+    <label for="code-integration">Code in integration</label>
+    <label for="type">Type</label>
+    <label for="name-on-labels">Name on labels</label>
+  </div>
+
+  <div class="service-textboxes">
+    <input type="text" id="code-integration">
+    <input type="text" id="type">
+    <input type="text" id="name-on-labels">
+  </div>
+
+  <p style="font-weight: bold ; margin-top: 40px;">Country compatibility</p>
+  <div class="country-compatibility">
+    <div class="everywhere-option">
+      <input type="radio" id="everywhere" name="country-compatibility" value="">
+      <label for="everywhere">Everywhere</label>
+    </div>
+
+    <div class="limited-countries-option">
+      <input type="radio" id="limited-countries" name="country-compatibility" value="">
+      <label for="limited-countries" >Limited countries</label>
+      <app-country-multi-select [serviceTypeCountries]= "serviceTypeCountries" class="country-multi-select"></app-country-multi-select>
+    </div>
+  </div>
+
+  <p style="font-weight: bold ; margin-top: 40px;">Service compatibility</p>
+  <div class="all-option">
+    <input type="radio" id="all" name="service-compatibility" value="">
+    <label for="all">All</label>
+  </div>
+
+  <div class="limited-services-option">
+    <input type="radio" id="limited-services" name="service-compatibility" value="">
+    <label for="limited-services" >Limited services</label>
+
+    <form class="support-form" style="border: 1px solid #ccc; padding: 10px;">
+      <div class="attributes">
+      <div>
+        <input type="checkbox" id="service1" name="service1" value="service1">
+        <label for="service1" > Service 1 </label><br>
+        <input type="checkbox" id="service2" name="service2" value="service2" >
+        <label for="service2" > Service 2 </label><br>
+        <input type="checkbox" id="service3" name="service3" value="service3">
+        <label for="service3" > Service 3</label>
+      </div>
+      <div style="margin-left: 12%;">
+        <input type="checkbox" id="service4" name="service4" value="service4">
+        <label for="service4"> Service 4 </label><br>
+        <input type="checkbox" id="service5" name="service5" value="service5">
+        <label for="service5"> Service 5 </label><br>
+        <input type="checkbox" id="service6" name="service6" value="service6">
+        <label for="service6">Service 6</label>
+      </div>
+      </div>
+    </form>
+  </div>
+
+  <p style="font-weight: bold ; margin-top: 40px;">Service attribute values</p>
+  <div>
+    <table class="table table-framed">
+      <thead>
+        <button class="btn btn-sm" style="margin: 10px 10px">Add new</button>
+        <tr>
+          <th>
+            SERVICE ATTRIBUTE VALUE
+          </th>
+          <th>
+            SPECIFIES
+          </th>
+          <th>
+          </th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</form>

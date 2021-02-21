@@ -1,0 +1,161 @@
+<div class="overview-title">
+  <h5>Carrier setup overview</h5>
+</div>
+
+<div class="basic-carrier-information-section">
+  <h6>Basic carrier information</h6>
+  <table class="table table-framed">
+    <thead>
+      <tr>
+        <th>
+          CARRIER NAME
+        </th>
+        <th>
+          CARRIER CODE
+        </th>
+        <th>
+          COUNTRIER OF OPERATION
+        </th>
+        <th>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <button class="warning-disabled-btn" disabled>
+    <i class="fas fa-exclamation-triangle"></i>
+    You have unfilled fields in thid section.</button>
+</div>
+
+<div class="services-by-carrier-section">
+  <h6>Services offered by the carrier</h6>
+  <table class="table table-framed">
+    <thead>
+      <tr>
+        <th>
+          SERVICE
+        </th>
+        <th>
+          SERVICE CODE
+        </th>
+        <th>
+          SERVICE ATTRIBUTES
+        </th>
+        <th class="hide-in-mobile-version">
+          ATTRIBUTE CODE
+        </th>
+        <th>
+          COUNTRIES OF OPERATION
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <button class="warning-disabled-btn" disabled>
+    <i class="fas fa-exclamation-triangle"></i>
+    You have unfilled fields in thid section.</button>
+</div>
+
+<div class="available-documents-section">
+  <h6>Documents available when using this carrier</h6>
+  <table class="table table-framed">
+    <thead>
+      <tr>
+        <th>
+          DOCUMENT
+        </th>
+        <th>
+          SERVICES
+        </th>
+        <th>
+          COUNTRIES OF OPERATION
+        </th>
+        <th>
+          PROCESS STAGE
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <button class="warning-disabled-btn" disabled>
+    <i class="fas fa-exclamation-triangle"></i>
+    You have unfilled fields in thid section.</button>
+</div>
+
+<div class="carrier-label-section">
+  <h6>Carrier label configuration</h6>
+  <p><i class="fas fa-check"></i> labels upploaded.</p>
+</div>
+
+<div class="tracking-number-section">
+  <h6>Tracking number configuaration</h6>
+  <p><i class="fas fa-check"></i> format selecteed and specified.</p>
+</div>
+
+<div class="CSA-section">
+  <h6>Carrier sender attribute</h6>
+  <table class="table table-framed">
+    <thead>
+      <tr>
+        <th>
+          ATTRIBUTES
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+
+<div class="available-documents-section">
+  <h6>This carrier setup is based on documents below</h6>
+  <button type="button" class="btn btn-primary btn-sm table-header-row-actionbtn-marginright">Add new</button>
+  <table class="table table-framed" style="width: 400px;">
+    <thead>
+      <tr>
+        <th>
+          UPLOADED
+        </th>
+        <th>
+          DOCUMENT
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <button class="warning-disabled-btn" disabled>
+    <i class="fas fa-exclamation-triangle"></i>
+    You have unfilled fields in thid section.</button>
+</div>
+
+<div class="status-section">
+  <h6>Status for set up or updates</h6>
+  <select id="status" name="status" style="width: 200px; margin-right: 10px;">
+    <option value="default">Choose the status</option>
+    <option *ngFor="let status of statuses">{{status}}</option>
+  </select><br>
+  <button type="button" class="btn btn-primary btn-sm table-header-row-actionbtn-marginright"
+    style="margin-right: 5px; margin-top: 10px;">Excel export</button>
+
+</div>
+
+<div class="end-buttons">
+  <button type="submit" routerLink="/customerSetup" class="btn btn-primary btn-primary">Back</button>
+  <button type="button" routerLink="/carrierSetupExport" class="btn btn-primary btn-primary">Save</button>
+</div>

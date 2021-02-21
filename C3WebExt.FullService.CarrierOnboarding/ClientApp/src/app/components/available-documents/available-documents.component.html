@@ -1,0 +1,28 @@
+<div class="documents-title">
+  <h5>Documents available when using this carrier</h5>
+</div>
+
+<div class="documents-section">
+  <button type="submit" class="btn btn-primary btn-primary" style="margin-right: 10px;">Add new</button>
+  <button type="submit" class="btn btn-primary btn-primary">Import</button>
+</div>
+
+<form class="documents" style="border: 1px solid #ccc; ">
+  <p style="margin-top: 10px;">
+    <i class="fa fa-plus-circle"
+    (click)="toggleServiceAttributeDetails(i)"
+    style= "margin: 10px;"> </i>
+    Document 1</p>
+  <div>
+    <button type="button" class="btn" style="margin-right: 5px;">Edit</button>
+    <button type="button" class="btn" style="margin-right: 5px;">Validate</button>
+    <button type="button" class="btn">Delete</button>
+  </div>
+</form>
+
+<app-document></app-document>
+
+<div class="end-buttons">
+  <button type="submit" routerLink="/carrierServices" class="btn btn-primary btn-primary">Back</button>
+  <button type="submit" routerLink="/carrierLabelConfiguration" class="btn btn-primary btn-primary">Next</button>
+</div>

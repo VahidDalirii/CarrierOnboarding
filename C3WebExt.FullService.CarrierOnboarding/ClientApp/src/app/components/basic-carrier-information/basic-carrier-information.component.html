@@ -1,0 +1,95 @@
+<h3>Carrier set up</h3>
+<!-- <a href="">Create new</a> -->
+
+<!-- <input type="range" list="development" name="development" min="0" max="70" step="10" style="width: 100%;">
+
+<datalist id="development">
+  <option value="0" selected></option>
+  <option value="10"></option>
+  <option value="20"></option>
+  <option value="30"></option>
+  <option value="40"></option>
+  <option value="50"></option>
+  <option value="60"></option>
+  <option value="70"></option>
+</datalist> -->
+
+<div class="basics-title">
+  <h5>Basic carrier information</h5>
+</div>
+
+<form>
+
+  <div class="carrier-name-section">
+    <label for="carrier-name">Carrier name</label><br>
+    <input type="text" [(ngModel)]="_carrier.carrierName" name="carrierName" class="form-control" required style="width: 250px;">
+    <span class="invalid-feedback">Carrier name is requierd.</span>
+  </div>
+
+  <label >Countries of operation</label><br>
+  <app-country-multi-select [serviceTypeCountries]= "serviceTypeCountries"></app-country-multi-select>
+
+  <div class="code-section">
+    <label for="code">Code</label><br>
+    <button type="submit"  (click)='autoGenerateCodeCar()' id="code" class="btn btn-primary btn-primary">Autogenerate</button>
+    <input type="text" [(ngModel)]="_carrier.codeCar" class="form-control" name="codeCar" required style="width: 250px;">
+    <span class="invalid-feedback">Carrier code is requierd.</span>
+  </div>
+
+  <div class="type-of-edi-integration">
+    <label>Type of EDI integration</label><br>
+
+    <div>
+      <button class="info-disabled-btn" disabled>
+        <i class="fas fa-info" style="margin-right: 10px; margin-left: 5px;"></i>
+        This selection will have an impact on service settings</button>
+    </div>
+
+    <input class="form-check-input" checked [(ngModel)]="_carrier.ediType" type="radio" id="files" name="typeOfEdi" value="Files" >
+    <label for="files" style="margin-bottom: 15px;">Files</label><br>
+    <input class="form-check-input" [(ngModel)]="_carrier.ediType" type="radio" id="web-services" name="typeOfEdi" value="Web servicecs">
+    <label for="web-services">Web servicecs</label><br>
+  </div>
+
+  <div class="support">
+    <label for="support">Support</label><br>
+    <button type="submit" (click)="toggleButtonName()" name="add-button" class="btn btn-primary btn-primary">{{buttonName}}</button>
+    <div *ngIf="showAddNewBtn; else ">
+      <input type="text" class="form-control" name="new-carrier-support" id="new-carrier-support"
+        [(ngModel)]="newCarrierSupport" required placeholder="Enter the new support"
+        style="width: 250px; margin-bottom: 10px;">
+      <span class="invalid-feedback">Enter a text to add</span>
+    </div>
+
+
+    <form class="support-form" style="border: 1px solid #ccc; padding: 10px;">
+      <div class="statuses-container">
+        <div class="status-section" *ngFor="let status of _carrier.carrierSupportList">
+          <input type="checkbox" [(ngModel)]="status.isChecked" name="{{status.label}}" id="{{status.label}}" (change)="changeSelection()">
+           <label class="support-labels" for="{{status.label}}">{{status.label}}</label>
+        </div>
+      </div>
+
+
+      <!-- <input type="checkbox"  name="edi" id="edi" value="EDI">
+      <label for="edi" style="margin-right: 150px;"> EDI </label>
+      <input type="checkbox"  name="status" id="status" value="Status">
+      <label for="status"> Status </label><br>
+      <input type="checkbox"  name="rating" id="rating" value="Rating">
+      <label for="rating" style="margin-right: 130px;"> Rating </label>
+      <input type="checkbox" name="leadtime" id="leadtime" value="Leadtime">
+      <label for="leadtime"> Leadtime </label><br>
+      <input type="checkbox"  name="booking" id="booking" value="Booking">
+      <label for="booking" style="margin-right: 116px;"> Booking </label>
+      <input type="checkbox" name="invoiceImport" id="invoiceImport" value="Invoice import">
+      <label for="invoiceImport"> Invoice import </label><br> -->
+    </form>
+
+  </div>
+</form>
+
+
+<div class="end-buttons">
+  <button type="submit" routerLink="/carrierServices" class="btn btn-primary btn-primary">Next</button>
+</div>
+

@@ -1,0 +1,141 @@
+<div class="tracking-number-title">
+  <h5>Tracking number configuration</h5>
+</div>
+
+<div class="tracking-number-configuration-section">
+  <div class="table">
+    <table class="table table-framed">
+      <thead>
+        <tr>
+          <th>
+            SELECTION
+          </th>
+          <th>
+            SITUATION
+          </th>
+          <th>
+            FORMAT
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="radio" [(ngModel)]="selectedSituation" (ngModelChange)="resetTextbox()" id="one-parcel-shipment" name="selection" value="oneParcel" checkeddas
+            >
+            <label for="one-parcel-shipment"></label>
+          </td>
+          <td>
+            The carrier do one parcel shipment only, shipment and parcel have the same tracking number.
+          </td>
+          <td>
+            <input type="text" [(ngModel)]= "oneParcelText" class="form-control" [disabled]="selectedSituation!='oneParcel'">
+            <span style="opacity: 0.5;">E.g. &lt;check10&gt;&lt;identity&gt;&lt;/check&gt;</span>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>
+            <input type="radio" [(ngModel)]="selectedSituation" (ngModelChange)="resetTextbox()" id="multi-parcel-shipment" name="selection" value="multiParcel">
+            <label for="multi-parcel-shipment"></label>
+          </td>
+          <td>
+            The carrier support multi parcel shipments, shipment and parcel have the same format but each parcel is
+            identified with an additional number as well.
+          </td>
+          <td>
+            <input type="text" [(ngModel)]= "multiParcelText" class="form-control" [disabled]="selectedSituation!='multiParcel'">
+            <span style="opacity: 0.5;">E.g. &lt;check11&gt;&lt;sender.edi&gt;&lt;identity&gt;&lt;/check&gt;</span>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>
+            <input type="radio" [(ngModel)]="selectedSituation" (ngModelChange)="resetTextbox()" id="sscc-parcel-shipment" name="selection" value="ssccParcel">
+            <label for="sscc-parcel-shipment"></label>
+          </td>
+          <td>
+            The carrier have seperate formats for shipments and parcels, the parcel format is SSCC which we have support
+            for.
+          </td>
+          <td>
+            <input type="text" [(ngModel)]= "ssccParcelText" class="form-control" [disabled]="selectedSituation!='ssccParcel'">
+            <span style="opacity: 0.5;">E.g. &lt;check10&gt;&lt;identity&gt;&lt;/check&gt;</span>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td>
+            <input type="radio" [(ngModel)]="selectedSituation" (ngModelChange)="resetTextbox()" id="advanced" name="selection" value="advanced">
+            <label for="advanced"></label>
+          </td>
+          <td>
+            More advanced, e.g. different for different services.
+          </td>
+          <td>
+            No format can be specified, it needs to be specified for a developer to write uniqe code.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="table">
+    <table class="table table-framed">
+      <thead>
+        <tr>
+          <th>
+            NUMBER RANGE TO USE
+          </th>
+          <th>
+            SETTINGS
+          </th>
+          <th>
+          </th>
+        </tr>
+      </thead>
+      <thead>
+        <tr>
+          <td>
+            <input type="radio" id="centiro-range-number" name="range-number" value="">
+            <label for="centiro-range-number">Centiro's</label>
+          </td>
+          <td>
+            <div class="settings">
+              <div>
+                <label for="can-rotate" style="margin-right: 110px;">Can rotate</label><br>
+                <select id="can-rotate" name="can-rotate" style="width: 170px; margin-right: 10px;">
+                  <option value="yes" selected>Yes</option>
+                  <option value="no">No</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="length">Length</label><br>
+                <input type="number" id="length" name="length" min="1" max="10" value="5"
+                  style="width: 170px; height: 25px;">
+              </div>
+            </div>
+          </td>
+        </tr>
+      </thead>
+      <thead>
+        <tr>
+          <td>
+            <input type="radio" id="other-range-number" name="range-number" value="">
+            <label for="other-range-number">Other</label>
+          </td>
+        </tr>
+      </thead>
+    </table>
+  </div>
+
+  <div class="end-buttons">
+    <button type="submit" routerLink="/carrierLabelConfiguration"  class="btn btn-primary btn-primary">Back</button>
+    <button type="submit" routerLink="/customerSetup" class="btn btn-primary btn-primary">Next</button>
+  </div>
+
+</div>
